@@ -1,0 +1,111 @@
+body {
+    font-family: "Montserrat",sans-serif;
+    background-color: black;
+    background-image: url('https://source.unsplash.com/1600x900/?weather,nature');
+    background-repeat: no-repeat;
+    background-size: cover ;
+    height: 100vh;
+    margin: 0;
+    font-size: 120%;
+    color: rgb(255, 255, 255);
+}
+
+/* Heading Section */
+
+.heading {
+    position: fixed;
+    width: 100%;
+    height: auto;
+    padding: 3%;
+    text-align: center;
+    background-color: #393e46;
+    color: #00adb5;
+}
+
+/* Weather Display Section */
+
+.weather-card {
+  position: fixed;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #00adb5d0;
+  border-radius: 30px;
+  padding: 2em;
+  width: 100%;
+  max-width: 420px;
+}
+
+.weather-search {
+  padding: 0;
+}
+
+.search-input {
+    padding: 0.4em 1em;
+    font-size: 105%;
+    color: #00adb5;
+    background-color: #eeeeee;
+    border-radius: 24px;
+    border: none;
+    outline: none;
+    font-family: inherit;
+    font-size: 105%;
+    width: calc(100% - 100px);
+}
+
+.search-btn {
+    background-color: #eeeeee;
+    margin: 0.5em;
+    border-radius: 50%;
+    border: none;
+    outline: none;
+    height: 2.3em;
+    width: 2.3em;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+}
+
+.search-btn:hover {
+    background-color: #a7cac6;
+}
+
+.weather-disp.loading {
+  visibility: hidden;
+  max-height: 20px;
+  position: relative;
+}
+
+.weather-disp.loading:after {
+  visibility: visible;
+  content: "Loading...";
+  color: white;
+  position: absolute;
+  top: 0;
+  left: 20px;
+}
+
+.city-name {
+  text-transform: capitalize;
+}
+
+h2.temp{
+  margin: 0; 
+  margin-bottom: 0.4em;
+}
+
+.condition {
+  display: flex;
+  align-items: center;
+}
+
+.description {
+text-transform: capitalize;
+}
+
+
+/* Media Queries */
+@media (max-width: 415px) {
+  .weather-card{
+    max-width: 80%;
+  }
+}
